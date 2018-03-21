@@ -1,3 +1,44 @@
 <resources>
-    <string name="app_name">FinalProject</string>
+    <string name="app_name">FitApp</string>
+    <string name="info">Profile</string>
+    <string name="food_dairy">food dairy</string>
+    <string name="food_suggestion">food suggestion</string>
+    <string name="age">Age</string>
+    <string name="height">Height</string>
+    <string name="start_runing">start runing</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="activity_level">
+        <item>Rarely Exercise</item>
+        <item>Exercise 1 To 3 Days Per Week</item>
+        <item>Exercise 3 To 5 Days Per Week</item>
+        <item>Exercise 6 To 7 Days Per Week</item>
+    </string-array>
+    <string-array name="goal">
+        <item>Stay The Same Weight</item>
+        <item>Loss Weight</item>
+        <item>Gain Weight</item>
+    </string-array>
+    <string-array name="type">
+        <item>Beverage</item>
+        <item>Food</item>
+    </string-array>
+    <string name="title_activity_food">FoodActivity</string>
+    <string name="title_activity_food_dairy">FoodDairyActivity</string>
+    <string name="weight">Weight</string>
+    <string name="gender">Gender</string>
+    <string name="level_of_activity">Level Of Activity</string>
+    <string name="goal">Goal</string>
+    <string name="submit">submit</string>
+    <string name="end_run">end run</string>
+    <string name="show_records">show records</string>
+    <string name="start">start</string>
+    <string name="sotry_by_km">sotry by km</string>
+    <string name="calories">Calories</string>
+    <string name="fat">Fat</string>
+    <string name="protein">Protein</string>
+    <string name="type">Type</string>
 </resources>
+

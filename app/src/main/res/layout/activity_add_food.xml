@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.itaigafni.finalproject.AddFoodActivity"
+    android:background="@color/background">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/sv"
+        android:layout_width="278dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/textViewColor"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/txtAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/txtPlus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sv">
+
+        <TextView
+            android:textColor="@color/textViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calories"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:textColor="@color/textColor"
+            android:id="@+id/txtCal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/editCal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:visibility="gone"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:textColor="@color/textViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fat"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:textColor="@color/textColor"
+            android:id="@+id/txtFat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/editFat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:visibility="gone"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:textColor="@color/textViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/protein"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:textColor="@color/textColor"
+            android:id="@+id/txtProtein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/editProtein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:visibility="gone"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:textColor="@color/textViewColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:textColor="@color/textColor"
+            android:id="@+id/txtType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/typeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+        </Spinner>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPlus"
+        android:layout_width="75dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toStartOf="@+id/txtAmount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:textColor="@color/textViewColor"
+        android:id="@+id/txtAmount"
+        android:layout_width="75dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="20dp"
+        android:text=""
+        android:gravity="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toStartOf="@+id/txtMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtPlus" />
+
+    <TextView
+        android:id="@+id/txtMinus"
+        android:layout_width="60dp"
+        android:layout_height="12dp"
+        android:layout_marginBottom="44dp"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/txtAmount" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:textColor="@color/textColor"
+        android:layout_width="344dp"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAdd"
+        android:layout_width="43dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/ic_menu_add"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
