@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,15 +22,15 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AddFoodActivity extends AppCompatActivity implements SearchView.OnQueryTextListener, SearchView.OnSuggestionListener, View.OnClickListener {
-    SearchView searchView;
-    FoodDbHelper dbHelper;
-    SimpleCursorAdapter adapter;
-    TextView txtCal,txtFat,txtPro,txtPlus,txtMinus,txtAmount,txtAdd,txtType;
-    EditText editCal,editFat,editPro;
-    Button btnSub;
-    LinearLayout linearLayout;
-    Spinner spinner;
-    boolean isAdd;
+    private SearchView searchView;
+    private FoodDbHelper dbHelper;
+    private SimpleCursorAdapter adapter;
+    private TextView txtCal,txtFat,txtPro,txtPlus,txtMinus,txtAmount,txtAdd,txtType;
+    private EditText editCal,editFat,editPro;
+    private Button btnSub;
+    private LinearLayout linearLayout;
+    private Spinner spinner;
+    private boolean isAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

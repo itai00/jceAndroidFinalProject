@@ -19,7 +19,7 @@ public class SongPlayer implements MediaPlayer.OnPreparedListener,MediaPlayer.On
     private Cursor mCursor;
     private Context mContext;
     private MediaPlayer player;
-    private boolean isInit,isOk;
+    private boolean isInit;
     private int songPos;
     String title;
     public SongPlayer(Context context){

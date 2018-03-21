@@ -15,10 +15,10 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    Button info,run,dairy;
-    TextView calories,calConsumed;
-    ProgressBar progressBar;
-    final int INFO_ACTIVITY_REQUEST_CODE=1;
+    private Button info,run,dairy;
+    private TextView calories,calConsumed;
+    private ProgressBar progressBar;
+    private final int INFO_ACTIVITY_REQUEST_CODE=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

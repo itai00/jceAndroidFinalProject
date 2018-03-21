@@ -10,10 +10,10 @@ import android.view.View;
 import android.widget.Button;
 
 public class RecordsActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnSortKm;
-    RecordsDbHelper dbHelper;
-    MyRecordAdapter mAdapter;
-    boolean isSort;
+    private Button btnSortKm;
+    private RecordsDbHelper dbHelper;
+    private MyRecordAdapter mAdapter;
+    private boolean isSort;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

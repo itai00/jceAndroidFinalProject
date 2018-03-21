@@ -1,25 +1,22 @@
 package com.example.itaigafni.finalproject;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
 public class InfoActivity extends AppCompatActivity implements View.OnClickListener{
-    Button submit;
-    EditText age,weight,height;
-    Spinner gender,activity,goal;
-    SharedPreferences preferences;
+    private Button submit;
+    private EditText age,weight,height;
+    private Spinner gender,activity,goal;
+    private SharedPreferences preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

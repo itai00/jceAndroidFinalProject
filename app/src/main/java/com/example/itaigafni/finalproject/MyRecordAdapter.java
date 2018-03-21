@@ -15,8 +15,8 @@ import java.text.DecimalFormat;
  */
 
 public class MyRecordAdapter extends RecyclerView.Adapter<MyRecordAdapter.MyViewHolder> {
-    Cursor mCursor;
-    RecordsActivity mContext;
+    private Cursor mCursor;
+    private RecordsActivity mContext;
 
     MyRecordAdapter(RecordsActivity context, Cursor cursor){
         this.mContext = context;

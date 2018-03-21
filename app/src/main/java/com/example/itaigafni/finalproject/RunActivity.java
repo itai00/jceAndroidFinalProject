@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.SystemClock;
@@ -14,7 +13,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
@@ -33,16 +31,16 @@ import java.util.Date;
 
 public class RunActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,LocationListener, View.OnClickListener {
-    GoogleApiClient mGoogleApiClient;
-    LocationRequest mLocationRequest;
-    Location lastLocation;
-    TextView km,songName;
-    Chronometer chronometer;
-    boolean isStart,isPlay;
-    Button start,play,prev,next,reset,records;
-    final int SAMPLE = 10 , GPS_REQUEST=1,READ_STORAGE_REQUEST=2,DISTANCE=1000;
-    SongPlayer player;
-    long timeWhenStopped;
+    private GoogleApiClient mGoogleApiClient;
+    private LocationRequest mLocationRequest;
+    private Location lastLocation;
+    private TextView km,songName;
+    private Chronometer chronometer;
+    private boolean isStart,isPlay;
+    private Button start,play,prev,next,reset,records;
+    private final int SAMPLE = 10 , GPS_REQUEST=1,READ_STORAGE_REQUEST=2,DISTANCE=1000;
+    private SongPlayer player;
+    private long timeWhenStopped;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
