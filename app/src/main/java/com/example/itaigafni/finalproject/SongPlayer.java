@@ -21,7 +21,6 @@ public class SongPlayer implements MediaPlayer.OnPreparedListener,MediaPlayer.On
     private MediaPlayer player;
     private boolean isInit;
     private int songPos;
-    private String title;
     public SongPlayer(Context context){
         mContext=context;
         mCursor=null;
@@ -31,7 +30,6 @@ public class SongPlayer implements MediaPlayer.OnPreparedListener,MediaPlayer.On
         player.setOnPreparedListener(this);
         player.setOnCompletionListener(this);
         isInit=false;
-        title="";
 
     }
     public void init(){
