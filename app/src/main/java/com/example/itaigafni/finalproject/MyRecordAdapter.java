@@ -65,7 +65,7 @@ public class MyRecordAdapter extends RecyclerView.Adapter<MyRecordAdapter.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView txtKm,txtDate,txtTime,txtDel;
+        private TextView txtKm,txtDate,txtTime,txtDel;
         public MyViewHolder(View itemView) {
             super(itemView);
             txtKm = itemView.findViewById(R.id.txtKm);
