@@ -150,7 +150,7 @@ public class AddFoodActivity extends AppCompatActivity implements SearchView.OnQ
         txtPro.setText(c.getInt(c.getColumnIndex(Constant.Food.PROTEIN))+"");
         txtType.setText(c.getString(c.getColumnIndex(Constant.Food.TYPE)));
         //if add button was pressed disappear the add related stuff
-        if(isAdd==true){
+        if(isAdd){
             isAdd=false;
             editPro.setVisibility(View.GONE);
             editFat.setVisibility(View.GONE);
@@ -268,7 +268,7 @@ public class AddFoodActivity extends AppCompatActivity implements SearchView.OnQ
         }
     }
     //check if the food is the food database
-    boolean checkIfFoodExist(String foodName){
+    private boolean checkIfFoodExist(String foodName){
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.query(Constant.Food.TABLE_NAME,
                 new String[]{Constant.Food.NAME},
@@ -277,8 +277,6 @@ public class AddFoodActivity extends AppCompatActivity implements SearchView.OnQ
                 null,
                 null,
                 null);
-        if(cursor.getCount()==0)
-            return false;
-        return true;
+        return cursor.getCount()!=0;
     }
 }

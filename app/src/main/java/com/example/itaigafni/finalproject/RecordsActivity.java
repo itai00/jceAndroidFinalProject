@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class RecordsActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnSortKm;
     private RecordsDbHelper dbHelper;
     private MyRecordAdapter mAdapter;
     private boolean isSort;
@@ -18,8 +17,8 @@ public class RecordsActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_records);
-        this.btnSortKm = findViewById(R.id.btnSortKm);
-        this.btnSortKm.setOnClickListener(this);
+        Button btnSortKm = findViewById(R.id.btnSortKm);
+        btnSortKm.setOnClickListener(this);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         dbHelper = new RecordsDbHelper(this);
         mAdapter = new MyRecordAdapter(this,queryTable());

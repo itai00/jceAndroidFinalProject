@@ -21,7 +21,6 @@ import java.util.Calendar;
 
 public class FoodDairyActivity extends AppCompatActivity implements RecyclerItemTouchHelper.RecyclerItemTouchHelperListener {
     private TextView date,txtTotal;
-    private DatePickerDialog datePickerDialog;
     private RecyclerView rv;
     private FoodDairyDbHelper dbHelper;
     private MyFoodAdapter mAdapter;
@@ -47,7 +46,7 @@ public class FoodDairyActivity extends AppCompatActivity implements RecyclerItem
                 int mMonth = c.get(Calendar.MONTH); // current month
                 int mDay = c.get(Calendar.DAY_OF_MONTH); // current day
                 // date picker dialog
-                datePickerDialog = new DatePickerDialog(FoodDairyActivity.this,
+                DatePickerDialog datePickerDialog = new DatePickerDialog(FoodDairyActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
 
                             @Override
@@ -95,7 +94,6 @@ public class FoodDairyActivity extends AppCompatActivity implements RecyclerItem
     }
     //after the food dairy database was updated
     private void reQueryFood(){
-        Calendar c = Calendar.getInstance();
         mAdapter = new MyFoodAdapter(getFoodByDate(),this);
         rv.setAdapter(mAdapter);
     }

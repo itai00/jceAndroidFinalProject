@@ -43,7 +43,7 @@ public class MyRecordAdapter extends RecyclerView.Adapter<MyRecordAdapter.MyView
             public void onClick(View v) { // the delete query
                 RecordsDbHelper dbHelper = new RecordsDbHelper(mContext);
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                int x=db.delete(Constant.Records.TABLE_NAME,
+                db.delete(Constant.Records.TABLE_NAME,
                         Constant.Records._ID +"=?"
                         ,new String[]{id+""});
                 mContext.refreshTable();

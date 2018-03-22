@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 public class InfoActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button submit;
     private EditText age,weight,height;
     private Spinner gender,activity,goal;
     private SharedPreferences preferences;
@@ -21,7 +20,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-        submit = findViewById(R.id.btnSubmit);
+        Button submit = findViewById(R.id.btnSubmit);
         age = findViewById(R.id.editAge);
         weight = findViewById(R.id.editWeight);
         height = findViewById(R.id.editHeight);
@@ -53,7 +52,8 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         //calculate the calories needed according to the info
-        int age=0,height=0;
+        int age=0;
+        int height=0;
         float weight=0;
         boolean isOneFieldEmpty = false;
         String message="";

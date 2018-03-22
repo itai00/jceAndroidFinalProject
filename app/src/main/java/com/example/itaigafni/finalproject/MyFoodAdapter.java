@@ -15,8 +15,8 @@ import android.widget.TextView;
  */
 
 public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyViewHolder>  {
-    Cursor mCursor;
-    FoodDairyActivity mContext;
+    private Cursor mCursor;
+    private FoodDairyActivity mContext;
 
     MyFoodAdapter(Cursor mCursor,FoodDairyActivity mContext){
         this.mContext=mContext;
@@ -38,7 +38,7 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyViewHold
         holder.txtAmount.setText("Amount: "+mCursor.getString(mCursor.getColumnIndex(Constant.FoodDairy.AMOUNT)));
         holder.txtTime.setText(mCursor.getString(mCursor.getColumnIndex(Constant.FoodDairy.TIME)));
         String type = mCursor.getString(mCursor.getColumnIndex(Constant.FoodDairy.TYPE));
-        if(type.equals("Beverage")){
+        if("Beverage".equals(type)){
             holder.img.setImageDrawable(mContext.getResources().getDrawable(R.drawable.ic_drink,null));
         }
         else{
@@ -54,9 +54,9 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView txtName,txtCal,txtAmount,txtTime;
-        RelativeLayout viewBackground, viewForeground;
-        ImageView img;
+        private TextView txtName,txtCal,txtAmount,txtTime;
+        private RelativeLayout viewBackground, viewForeground;
+        private ImageView img;
         public MyViewHolder(View itemView) {
             super(itemView);
             txtName = itemView.findViewById(R.id.food_name);
@@ -67,14 +67,20 @@ public class MyFoodAdapter extends RecyclerView.Adapter<MyFoodAdapter.MyViewHold
             viewBackground = itemView.findViewById(R.id.view_background);
             viewForeground = itemView.findViewById(R.id.view_foreground);
         }
+        public RelativeLayout getviewBackground(){
+            return viewBackground;
+        }
+        public RelativeLayout getviewForeground(){
+            return viewForeground;
+        }
     }
-    public void removeItem(int position){
+    public void removeItem(int position) {
         mCursor.moveToPosition(position);
         final int id = mCursor.getInt(mCursor.getColumnIndex(Constant.Records._ID));
         FoodDairyDbHelper dbHelper = new FoodDairyDbHelper(mContext);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         db.delete(Constant.FoodDairy.TABLE_NAME,
-                Constant.Records._ID +"=?"
-                ,new String[]{id+""});
+                Constant.Records._ID + "=?"
+                , new String[]{id + ""});
     }
 }

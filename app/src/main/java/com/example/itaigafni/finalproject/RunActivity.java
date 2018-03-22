@@ -117,7 +117,6 @@ public class RunActivity extends AppCompatActivity implements GoogleApiClient.Co
         float distance = location.distanceTo(lastLocation)/DISTANCE;
         km+=distance;
         this.km.setText("Km: "+new DecimalFormat("##.##").format(km));
-        LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         lastLocation=location;
     }
 
@@ -222,6 +221,7 @@ public class RunActivity extends AppCompatActivity implements GoogleApiClient.Co
                 } else {
                     Toast.makeText(this,"GPS permission denied",Toast.LENGTH_LONG).show();
                 }
+                break;
             }
         }
     }

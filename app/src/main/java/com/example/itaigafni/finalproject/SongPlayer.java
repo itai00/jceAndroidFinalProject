@@ -21,7 +21,7 @@ public class SongPlayer implements MediaPlayer.OnPreparedListener,MediaPlayer.On
     private MediaPlayer player;
     private boolean isInit;
     private int songPos;
-    String title;
+    private String title;
     public SongPlayer(Context context){
         mContext=context;
         mCursor=null;
@@ -113,7 +113,6 @@ public class SongPlayer implements MediaPlayer.OnPreparedListener,MediaPlayer.On
         //ckeck if its the last song
         if(songPos+1==mCursor.getCount()){
             Toast.makeText(mContext,"No Song To Play",Toast.LENGTH_LONG).show();
-            player.reset();
             return;
         }
         songPos++;
@@ -123,7 +122,6 @@ public class SongPlayer implements MediaPlayer.OnPreparedListener,MediaPlayer.On
         //check if its the last song
         if(songPos==0) {
             Toast.makeText(mContext,"No Song To Play",Toast.LENGTH_LONG).show();
-            player.reset();
             return;
         }
         songPos--;

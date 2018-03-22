@@ -15,7 +15,6 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    private Button info,run,dairy;
     private TextView calories,calConsumed;
     private ProgressBar progressBar;
     private final int INFO_ACTIVITY_REQUEST_CODE=1;
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        info=findViewById(R.id.btnInfo);
+        Button info=findViewById(R.id.btnInfo);
         calories = findViewById(R.id.txtCalories);
         calConsumed = findViewById(R.id.txtConsumed);
         info.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         progressBar = findViewById(R.id.progressBar);
-        run = findViewById(R.id.btnRun);
+        Button run = findViewById(R.id.btnRun);
         run.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        dairy = findViewById(R.id.btnDairy);
+        Button dairy = findViewById(R.id.btnDairy);
         dairy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
